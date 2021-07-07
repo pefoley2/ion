@@ -136,7 +136,8 @@ def picture_view(request, user_id, year=None):
             data = None
 
     if data is None:
-        img = io.open(default_image_path, mode="rb").read()
+        with io.open(default_image_path, mode="rb") as f:
+            img = f.read()
     else:
         image_buffer = io.BytesIO(data)
 
@@ -147,7 +148,8 @@ def picture_view(request, user_id, year=None):
         try:
             img = image_buffer.read()
         except UnicodeDecodeError:
-            img = io.open(default_image_path, mode="rb").read()
+            with io.open(default_image_path, mode="rb") as f:
+                img = f.read()
         image_buffer.close()
     response.write(img)
 

@@ -80,9 +80,9 @@ def search_view(request):
         if query_error:
             search = []
 
-        for i in results:
-            if results[i]:
-                results[i] = results[i].filter(user__in=search)
+        for key, value in results.items():
+            if value:
+                results[key] = value.filter(user__in=search)
 
     class NoneDict(dict):
         def __getitem__(self, key):
