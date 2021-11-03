@@ -32,7 +32,7 @@ django-widget-tweaks==1.4.8
 djangorestframework==3.12.4
 docutils==0.17.1
 Fabric3==1.14.post1
-flower==0.9.7
+flower==1.0.0
 gunicorn==20.1.0
 hiredis==2.0.0
 ipython==7.24.1
