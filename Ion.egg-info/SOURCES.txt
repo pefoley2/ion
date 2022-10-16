@@ -15,6 +15,7 @@ Vagrantfile
 deploy
 fabfile.py
 manage.py
+poetry.lock
 pyproject.toml
 pytest.ini
 requirements.txt
